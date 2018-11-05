@@ -1,10 +1,10 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppProject"
              x:Class="AppProject.MainPage">
- <ScrollView>
-    <StackLayout>
+    <ScrollView>
+        <StackLayout>
 
 
 
@@ -37,8 +37,8 @@
                     <ColumnDefinition Width="50*"/>
                     <ColumnDefinition Width="50*"/>
                 </Grid.ColumnDefinitions>
-                
-                
+
+
 
                 <Label
                 Grid.Row="0"
@@ -67,7 +67,7 @@
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
                 </Slider>
-                
+
                 <Label
                 Grid.Row="2"
                 Grid.Column="0"
@@ -119,7 +119,7 @@
                 Text="Individual Income Tax Rate for more than $100,000">
                 </Label>
 
-                <Slider x:Name="AllRev"
+                <Slider x:Name="CorporateTaxRate"
                 Grid.Row="11"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
@@ -127,28 +127,37 @@
                 <Label
                 Grid.Row="12"
                 Grid.Column="0"
-                Text="Corporate Income Tax Rate">
+                Text="Corporate Tax Rate">
                 </Label>
 
-
-
-                <Label x:Name="Earnings1"
+                <Label x:Name="TotalRevenue"
                     Grid.Row="13" Grid.Column="0"
                     Text="Total Revenue: "  FontSize="Medium">
                 </Label>
-                
-                
-                
 
-                <Button Grid.Row="14" Grid.Column="0"
+
+                <Label x:Name="EarningsBind" Text="{Binding Path=AnswerValue, Mode=OneWay}"
+                    Grid.Row="14" Grid.Column="0"
+                      FontSize="Medium"
+                    >
+                </Label>
+
+                <Button Grid.Row="16" Grid.Column="0"
            x:Name="submit"
            Clicked="submit_Clicked"
            Text="Calculate"
            HorizontalOptions="End"
            VerticalOptions="CenterAndExpand" >
-                </Button>
+                </Button> 
 
+                <!--BindingContext="{Binding Path=Arg1, Mode=TwoWay}"-->
+                <!--BindingContext="{x:Reference AllRev}"-->
 
+                <!--<Entry x:Name="entryArg1" Placeholder="0" Text="{Binding Path=Arg1, Mode=TwoWay}"></Entry>
+                <Label Text="  +  "></Label>
+                <Entry x:Name="entryArg2" Placeholder="0" Text="{Binding Path=Arg2, Mode=TwoWay}"></Entry>
+                <Label Text="  =  "></Label>
+                <Label x:Name="lblAnswer" Text="{Binding Path=AnswerValue, Mode=OneWay}"></Label>-->
 
 
 
@@ -405,11 +414,11 @@
                 </Label>
 
             </Grid>
-            <Entry x:Name="entryArg1" Placeholder="0" Text="{Binding Path=Arg1, Mode=TwoWay}"></Entry>
+            <!--<Entry x:Name="entryArg1" Placeholder="0" Text="{Binding Path=Arg1, Mode=TwoWay}"></Entry>
             <Label Text="  +  "></Label>
             <Entry x:Name="entryArg2" Placeholder="0" Text="{Binding Path=Arg2, Mode=TwoWay}"></Entry>
             <Label Text="  =  "></Label>
-            <Label x:Name="lblAnswer" Text="{Binding Path=AnswerValue, Mode=OneWay}"></Label>
+            <Label x:Name="lblAnswer" Text="{Binding Path=AnswerValue, Mode=OneWay}"></Label>-->
 
 
         </StackLayout>
