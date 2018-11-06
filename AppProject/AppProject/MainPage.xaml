@@ -6,20 +6,14 @@
     <ScrollView>
         <StackLayout>
 
-
-
             <Label Text="Balance the Budget" HorizontalOptions="CenterAndExpand" FontSize="Large">
-
             </Label>
 
             <Label Text="GDP: $20.66 Trillion" HorizontalOptions="CenterAndExpand" FontSize="Large">
-
             </Label>
 
             <Label Text="Employed: 156,562,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large">
-
             </Label>
-
 
             <Grid
             ColumnSpacing="10"
@@ -38,12 +32,10 @@
                     <ColumnDefinition Width="50*"/>
                 </Grid.ColumnDefinitions>
 
-
-
                 <Label
                 Grid.Row="0"
                 Grid.Column="0"
-                Text="Revenue"
+                Text="Revenue in Billions USD"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 BackgroundColor="Green"
@@ -53,7 +45,7 @@
                 <Label
                 Grid.Row="0"
                 Grid.Column="1"
-                Text="Expenditure"
+                Text="Expenditure in Billions USD"
                 FontAttributes="Bold"
                 HorizontalOptions="Center"
                 BackgroundColor="Red"
@@ -62,7 +54,7 @@
 
                 <!-- Revenue -->
 
-                <Slider
+                <Slider x:Name="LessThan25" ValueChanged="TotalSliderRevenue_ValueChanged"
                 Grid.Row="1"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
@@ -122,7 +114,7 @@
                 <Slider x:Name="CorporateTaxRate"
                 Grid.Row="11"
                 Grid.Column="0"
-                Minimum="0" Maximum="100">
+                Minimum="0" Maximum="100" Value="21" ValueChanged="TotalSliderRevenue_ValueChanged">
                 </Slider>
                 <Label
                 Grid.Row="12"
@@ -136,40 +128,19 @@
                 </Label>
 
 
-                <Label x:Name="EarningsBind" Text="{Binding Path=AnswerValue, Mode=OneWay}"
+                <Label x:Name="RevenueTest" Text="Total Revenue:"
                     Grid.Row="14" Grid.Column="0"
                       FontSize="Medium"
                     >
                 </Label>
 
                 <Button Grid.Row="16" Grid.Column="0"
-           x:Name="submit"
-           Clicked="submit_Clicked"
-           Text="Calculate"
-           HorizontalOptions="End"
-           VerticalOptions="CenterAndExpand" >
-                </Button> 
-
-                <!--BindingContext="{Binding Path=Arg1, Mode=TwoWay}"-->
-                <!--BindingContext="{x:Reference AllRev}"-->
-
-                <!--<Entry x:Name="entryArg1" Placeholder="0" Text="{Binding Path=Arg1, Mode=TwoWay}"></Entry>
-                <Label Text="  +  "></Label>
-                <Entry x:Name="entryArg2" Placeholder="0" Text="{Binding Path=Arg2, Mode=TwoWay}"></Entry>
-                <Label Text="  =  "></Label>
-                <Label x:Name="lblAnswer" Text="{Binding Path=AnswerValue, Mode=OneWay}"></Label>-->
-
-
-
-
-
-
-
-
-
-
-
-
+               x:Name="submit"
+               Clicked="submit_Clicked"
+               Text="Calculate"
+               HorizontalOptions="End"
+               VerticalOptions="CenterAndExpand" >
+                </Button>
 
 
 
@@ -414,13 +385,6 @@
                 </Label>
 
             </Grid>
-            <!--<Entry x:Name="entryArg1" Placeholder="0" Text="{Binding Path=Arg1, Mode=TwoWay}"></Entry>
-            <Label Text="  +  "></Label>
-            <Entry x:Name="entryArg2" Placeholder="0" Text="{Binding Path=Arg2, Mode=TwoWay}"></Entry>
-            <Label Text="  =  "></Label>
-            <Label x:Name="lblAnswer" Text="{Binding Path=AnswerValue, Mode=OneWay}"></Label>-->
-
-
         </StackLayout>
 
     </ScrollView>
