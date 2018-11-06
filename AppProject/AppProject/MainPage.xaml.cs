@@ -10,11 +10,12 @@ namespace AppProject
 {
     public partial class MainPage : ContentPage
     {
-        const double LESS_THAN_25000 = 20;
-        const double SECOND_BRACKET = 0;
-        const double THIRD_BRACKET = 0;
-        const double FOURTH_BRACKET = 0;
-        const double FIFTH_BRACKET = 0;
+        const double FIRST_BRACKET = 1145; //1144545
+        const double SECOND_BRACKET = 8998; //8998075
+        const double THIRD_BRACKET = 6998; //6997737
+        const double FOURTH_BRACKET = 4803; //4803327
+        const double FIFTH_BRACKET = 3659; //3658556
+        const double SIXTH_BRACKET = 2095; //2094906
 
         const double TAXABLE_CORPORATE_PROFITS = 848.57;
 
@@ -51,7 +52,12 @@ namespace AppProject
 
         private void TotalSliderRevenue_ValueChanged(object sender, ValueChangedEventArgs e)
         {
-            var totRev = (LessThan25.Value / 100 * LESS_THAN_25000) + 
+            var totRev = (FirstBracket.Value / 100 * FIRST_BRACKET) +
+                         (SecondBracket.Value / 100 * SECOND_BRACKET) +
+                         (ThirdBracket.Value / 100 * THIRD_BRACKET) +
+                         (FourthBracket.Value / 100 * FOURTH_BRACKET) +
+                         (FifthBracket.Value / 100 * FIFTH_BRACKET) +
+                         (SixthBracket.Value / 100 * SIXTH_BRACKET) +
                          (CorporateTaxRate.Value / 100 * TAXABLE_CORPORATE_PROFITS);
 
             var taxOutput = String.Format("Total Revenue: ${0:0.00} Billion", totRev);

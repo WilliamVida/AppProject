@@ -9,7 +9,10 @@
             <Label Text="Balance the Budget" HorizontalOptions="CenterAndExpand" FontSize="Large">
             </Label>
 
-            <Label Text="GDP: $20.66 Trillion" HorizontalOptions="CenterAndExpand" FontSize="Large">
+            <Label Text="GDP: $20.66 Trillion Debt: $21.6 trillion" HorizontalOptions="CenterAndExpand" FontSize="Large">
+            </Label>
+
+            <Label Text="Debt to GDP Ratio: 105%" HorizontalOptions="CenterAndExpand" FontSize="Large">
             </Label>
 
             <Label Text="Employed: 156,562,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large">
@@ -54,31 +57,29 @@
 
                 <!-- Revenue -->
 
-                <Slider x:Name="LessThan25" ValueChanged="TotalSliderRevenue_ValueChanged"
+                <Slider x:Name="FirstBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
                 Grid.Row="1"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
                 </Slider>
-
                 <Label
                 Grid.Row="2"
                 Grid.Column="0"
-                Text="Individual Income Tax Rate for less than $25,000 a year">
+                Text="First Bracket">
                 </Label>
 
-                <Slider
+                <Slider x:Name="SecondBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
                 Grid.Row="3"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
-
                 </Slider>
                 <Label
                 Grid.Row="4"
                 Grid.Column="0"
-                Text="Individual Income Tax Rate for $25,000 - $50,000">
+                Text="Second Bracket">
                 </Label>
 
-                <Slider
+                <Slider x:Name="ThirdBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
                 Grid.Row="5"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
@@ -86,10 +87,10 @@
                 <Label
                 Grid.Row="6"
                 Grid.Column="0"
-                Text="Individual Income Tax Rate for $50,000 – $75,000">
+                Text="Third Bracket">
                 </Label>
-
-                <Slider
+                              
+                <Slider x:Name="FourthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
                 Grid.Row="7"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
@@ -97,10 +98,10 @@
                 <Label
                 Grid.Row="8"
                 Grid.Column="0"
-                Text="Individual Income Tax Rate for $75,000 - $100,000">
+                Text="Fourth Bracket">
                 </Label>
 
-                <Slider
+                <Slider x:Name="FifthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
                 Grid.Row="9"
                 Grid.Column="0"
                 Minimum="0" Maximum="100">
@@ -108,28 +109,39 @@
                 <Label
                 Grid.Row="10"
                 Grid.Column="0"
-                Text="Individual Income Tax Rate for more than $100,000">
+                Text="Fifth Bracket">
+                </Label>
+
+                <Slider x:Name="SixthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                Grid.Row="11"
+                Grid.Column="0"
+                Minimum="0" Maximum="100">
+                </Slider>
+                <Label
+                Grid.Row="12"
+                Grid.Column="0"
+                Text="Sixth Bracket">
                 </Label>
 
                 <Slider x:Name="CorporateTaxRate"
-                Grid.Row="11"
+                Grid.Row="13"
                 Grid.Column="0"
                 Minimum="0" Maximum="100" Value="21" ValueChanged="TotalSliderRevenue_ValueChanged">
                 </Slider>
                 <Label
-                Grid.Row="12"
+                Grid.Row="14"
                 Grid.Column="0"
                 Text="Corporate Tax Rate">
                 </Label>
 
                 <Label x:Name="TotalRevenue"
-                    Grid.Row="13" Grid.Column="0"
+                    Grid.Row="15" Grid.Column="0"
                     Text="Total Revenue: "  FontSize="Medium">
                 </Label>
 
 
                 <Label x:Name="RevenueTest" Text="Total Revenue:"
-                    Grid.Row="14" Grid.Column="0"
+                    Grid.Row="16" Grid.Column="0"
                       FontSize="Medium"
                     >
                 </Label>
