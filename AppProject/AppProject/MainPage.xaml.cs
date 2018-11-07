@@ -34,22 +34,6 @@ namespace AppProject
             TotalRevenue.Text = taxOutput;
         }
 
-        //private void CorporateTaxRate_ValueChanged(object sender, ValueChangedEventArgs e)
-        //{
-        //    var totRev = CorporateTaxRate.Value / 100 * TAXABLE_CORPORATE_PROFITS;
-        //    var taxOutput = String.Format("Total Revenue: ${0:0.00} Billion", totRev);
-
-        //    RevenueTest.Text = taxOutput;
-        //}
-
-        //private void LessThan25_ValueChanged(object sender, ValueChangedEventArgs e)
-        //{
-        //    var totRev = LessThan25.Value / 100 * LESS_THAN_25000;
-        //    var taxOutput = String.Format("Total Revenue: ${0:0.00} Billion", totRev);
-
-        //    RevenueTest.Text = taxOutput;
-        //}
-
         private void TotalSliderRevenue_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             var totRev = (FirstBracket.Value / 100 * FIRST_BRACKET) +
