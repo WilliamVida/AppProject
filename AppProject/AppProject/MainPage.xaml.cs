@@ -36,5 +36,11 @@ namespace AppProject
             var revenueFormat = String.Format("Total Revenue: ${0:0.00} Billion", totRev);
             TotalRevenue.Text = revenueFormat;
         }
+
+        private async void statisticsPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Statistics());
+        }
+
     }
 }
