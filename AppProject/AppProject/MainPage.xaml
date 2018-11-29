@@ -368,10 +368,12 @@
 
             </Grid>
 
-            <Button Text="Submit to Congress"></Button>
+            <Button Text="Submit to Congress" HorizontalOptions="Center"></Button>
 
-            <Button Text="Statistics"></Button>
+            <Button x:Name="statisticsPage" Text="Statistics" HorizontalOptions="Center" Clicked="statisticsPage_Clicked"></Button>
 
+            
+            
         </StackLayout>
 
     </ScrollView>
