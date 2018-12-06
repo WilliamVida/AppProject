@@ -18,142 +18,208 @@
             <Label Text="Employed: 156,562,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large">
             </Label>
 
-            <Grid
-            ColumnSpacing="10"
-            RowSpacing="10"
-            HorizontalOptions="CenterAndExpand"
-            VerticalOptions="Start"
+            <StackLayout>
+
+                <Grid
+                ColumnSpacing="10"
+                RowSpacing="10"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Start"
                 Margin="10, 10, 10, 10">
 
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
 
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="50*"/>
-                    <ColumnDefinition Width="50*"/>
-                </Grid.ColumnDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
-                <Label
-                Grid.Row="0" Grid.Column="0"
-                Text="Revenue in Billions USD"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                BackgroundColor="Green"
-                FontSize="Medium">
-                </Label>
+                        <Label
+                        Grid.Row="1" Grid.Column="0"
+                        Text="Revenue in Trillions USD"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Green"
+                        FontSize="Medium">
+                    </Label>
 
-                <Label
-                Grid.Row="0" Grid.Column="1"
-                Text="Expenditure in Billions USD"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"
-                BackgroundColor="Red"
-                FontSize="Medium">
-                </Label>
+                    <Label
+                        Grid.Row="1" Grid.Column="1"
+                        Text="Expenditure in Trillions USD"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        BackgroundColor="Red"
+                        FontSize="Medium">
+                    </Label>
+                    
+                </Grid>
+                
+            </StackLayout>
 
-                <!-- Revenue -->
+            <StackLayout>
+                
+                <Grid
+                    ColumnSpacing="10"
+                    RowSpacing="10"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Start"
+                    Margin="10, 10, 10, 10">
+ 
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
 
-                <Slider x:Name="FirstBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="1" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="4">
-                </Slider>
-                <Label
-                Grid.Row="2" Grid.Column="0"
-                Text="First Bracket">
-                </Label>
-
-                <Slider x:Name="SecondBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="3" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="16">
-                </Slider>
-                <Label
-                Grid.Row="4" Grid.Column="0"
-                Text="Second Bracket">
-                </Label>
-
-                <Slider x:Name="ThirdBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="5" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="18">
-                </Slider>
-                <Label
-                Grid.Row="6" Grid.Column="0"
-                Text="Third Bracket">
-                </Label>
-
-                <Slider x:Name="FourthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="7" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="21">
-                </Slider>
-                <Label
-                Grid.Row="8" Grid.Column="0"
-                Text="Fourth Bracket">
-                </Label>
-
-                <Slider x:Name="FifthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="9" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="24">
-                </Slider>
-                <Label
-                Grid.Row="10" Grid.Column="0"
-                Text="Fifth Bracket">
-                </Label>
-
-                <Slider x:Name="SixthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="11" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="27">
-                </Slider>
-                <Label
-                Grid.Row="12" Grid.Column="0"
-                Text="Sixth Bracket">
-                </Label>
-
-                <Slider x:Name="CorporateTaxRate" ValueChanged="TotalSliderRevenue_ValueChanged"
-                Grid.Row="13" Grid.Column="0"
-                Minimum="0" Maximum="100" Value="35">
-                </Slider>
-                <Label
-                Grid.Row="14" Grid.Column="0"
-                Text="Corporate Tax Rate">
-                </Label>
-
-                <Label x:Name="TotalRevenue" Text="Total Revenue:"
-                Grid.Row="15" Grid.Column="0"
-                FontSize="Medium">
-                </Label>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50*"></ColumnDefinition>
+                        <ColumnDefinition Width="25*"></ColumnDefinition>
+                        <ColumnDefinition Width="25*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
 
 
 
+                    <!-- Revenue -->
 
+                    
+                    <Slider x:Name="FirstBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="1" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="4">
+                    </Slider>
+                    <Label
+                        Grid.Row="2" Grid.Column="0"
+                        Text="First Bracket">
+                    </Label>
 
+                    <Slider x:Name="SecondBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="3" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="16">
+                    </Slider>
+                    <Label
+                        Grid.Row="4" Grid.Column="0"
+                        Text="Second Bracket">
+                    </Label>
 
+                    <Slider x:Name="ThirdBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="5" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="18">
+                    </Slider>
+                    <Label
+                        Grid.Row="6" Grid.Column="0"
+                        Text="Third Bracket">
+                    </Label>
 
+                    <Slider x:Name="FourthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="7" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="21">
+                    </Slider>
+                    <Label
+                        Grid.Row="8" Grid.Column="0"
+                        Text="Fourth Bracket">
+                    </Label>
+
+                    <Slider x:Name="FifthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="9" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="24">
+                    </Slider>
+                    <Label
+                        Grid.Row="10" Grid.Column="0"
+                        Text="Fifth Bracket">
+                    </Label>
+
+                    <Slider x:Name="SixthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="11" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="27">
+                    </Slider>
+                    <Label
+                        Grid.Row="12" Grid.Column="0"
+                        Text="Sixth Bracket">
+                    </Label>
+
+                    <Slider x:Name="CorporateTaxRate" ValueChanged="TotalSliderRevenue_ValueChanged"
+                        Grid.Row="13" Grid.Column="0"
+                        Minimum="0" Maximum="100" Value="35">
+                    </Slider>
+                    <Label
+                        Grid.Row="14" Grid.Column="0"
+                        Text="Corporate Tax Rate">
+                    </Label>
+
+                    <Label x:Name="TotalRevenue" Text="Total Revenue:"
+                        Grid.Row="15" Grid.Column="0"
+                        FontSize="Medium">
+                    </Label>
+
+                
+                
                 <!-- Expenditure -->
 
-                <Slider
-                Grid.Row="1"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="2"
-                Grid.Column="1"
-                Text="Medicare">
-                </Label>
+                    <Label Grid.Row="0" Grid.Column="1"
+                        Text="Mandatory Spending" FontSize="Small" Font="Bold">
+                    </Label>
+               
+                    <Slider
+                        Grid.Row="1" Grid.Column="1" ValueChanged="TotalSpending_ValueChanged"
+                        Minimum="0" Maximum="2" Value="0.966">
+                    </Slider>
+                    <Label
+                        Grid.Row="2" Grid.Column="1"
+                        Text="Medicare and Medicaid">
+                    </Label>
+                
+                    <Slider
+                        Grid.Row="1" Grid.Column="2"
+                        Minimum="0" Maximum="2" Value="0.939">
+                    </Slider>
+                    <Label
+                        Grid.Row="2" Grid.Column="2"
+                        Text="Social Security">
+                    </Label>
 
-                <Slider
-                Grid.Row="3"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="4"
-                Grid.Column="1"
-                Text="Social Security">
-                </Label>
+                    <Slider
+                        Grid.Row="3" Grid.Column="1"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="4" Grid.Column="1"
+                        Text="Income Security">
+                    </Label>
 
-                <Slider
+                    <Slider
+                        Grid.Row="3" Grid.Column="2"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="4" Grid.Column="2"
+                        Text="Income Security">
+                    </Label>
+                    
+                    <Slider
+                        Grid.Row="5" Grid.Column="1"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="6" Grid.Column="1"
+                        Text="Income Security">
+                    </Label>
+
+                    <Slider
+                        Grid.Row="7" Grid.Column="2"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="8" Grid.Column="2"
+                        Text="Income Security">
+                    </Label>
+
+
+
+
+
+                    <!--<Slider
                 Grid.Row="5"
                 Grid.Column="1"
                 Minimum="0" Maximum="100">
@@ -164,21 +230,12 @@
                 Text="Defense">
                 </Label>
 
-                <Slider
-                Grid.Row="7"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="8"
-                Grid.Column="1"
-                Text="Health">
-                </Label>
+                
 
                 <Slider
                 Grid.Row="9"
                 Grid.Column="1"
-                Minimum="0" Maximum="100">
+                Minimum="0" Maximum="3" Value="3">
                 </Slider>
                 <Label
                 Grid.Row="10"
@@ -186,16 +243,7 @@
                 Text="Net Interest">
                 </Label>
 
-                <Slider
-                Grid.Row="11"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="12"
-                Grid.Column="1"
-                Text="Income Security">
-                </Label>
+                
 
                 <Slider
                 Grid.Row="13"
@@ -364,11 +412,13 @@
                 Grid.Row="40"
                 Grid.Column="1"
                 Text="Energy">
-                </Label>
+                </Label>-->
 
             </Grid>
+                </StackLayout>
 
-            <Button Text="Submit to Congress" HorizontalOptions="Center"></Button>
+
+                    <Button Text="Submit to Congress" HorizontalOptions="Center"></Button>
 
             <Button x:Name="statisticsPage" Text="Statistics" HorizontalOptions="Center" Clicked="statisticsPage_Clicked"></Button>
 

@@ -23,6 +23,11 @@ namespace AppProject
             InitializeComponent();
         }
 
+        private async void statisticsPage_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Statistics());
+        }
+
         private void TotalSliderRevenue_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             var totRev = (FirstBracket.Value / 100 * FIRST_BRACKET) +
@@ -37,10 +42,11 @@ namespace AppProject
             TotalRevenue.Text = revenueFormat;
         }
 
-        private async void statisticsPage_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new Statistics());
-        }
+        
 
+        private void TotalSpending_ValueChanged(object sender, ValueChangedEventArgs e)
+        {
+
+        }
     }
 }

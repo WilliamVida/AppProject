@@ -13,12 +13,11 @@
             <Label Text="The people like"></Label>
             <Label Text="The people dislike"></Label>
 
-            <Label Text="Debt through the years"></Label>
+            <Label Text="Debt as percentage of GDP through the years"></Label>
             <Image Source="Images/chart1debt.jpg"></Image>
-
+            
             <Button Text="Back to Budget" HorizontalOptions="Center" Clicked="mainPage_Clicked">
             </Button>
-
 
         </StackLayout>
     </ContentPage.Content>
