@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{36B4297A-A9E6-4CDC-91DA-38852F7671B1}</ProjectGuid>
+    <ProjectGuid>{F192B6A1-0F6C-493A-8978-6B915FAAFB38}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>AppProject.UWP</RootNamespace>
@@ -130,8 +130,6 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
-    <Content Include="Images\chart1debt.jpg" />
-    <Content Include="Images\congress.png" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
@@ -146,11 +144,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Xamarin.Forms" Version="3.1.0.697729" />
-    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5" />
+    <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform" Version="6.1.5"/>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AppProject\AppProject.csproj">
-      <Project>{713D0DCD-FC92-4E2D-80BC-AA3BA3698D61}</Project>
+      <Project>{C2516978-640F-4CF3-8BFD-B957BEF55058}</Project>
       <Name>AppProject</Name>
     </ProjectReference>
   </ItemGroup>
