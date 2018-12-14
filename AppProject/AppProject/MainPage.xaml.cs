@@ -18,6 +18,8 @@ namespace AppProject
         const double SIXTH_BRACKET = 2102.581481481481; //2094906
         const double TAXABLE_CORPORATE_PROFITS = 977.1428571428571;
 
+        double surdef;
+
         public MainPage()
         {
             InitializeComponent();
@@ -28,7 +30,7 @@ namespace AppProject
             await Navigation.PushAsync(new Statistics());
         }
 
-        private void TotalSliderRevenue_ValueChanged(object sender, ValueChangedEventArgs e)
+        private void TotalRevenue_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             var totRev = (FirstBracket.Value / 100 * FIRST_BRACKET) +
                          (SecondBracket.Value / 100 * SECOND_BRACKET) +
@@ -37,15 +39,54 @@ namespace AppProject
                          (FifthBracket.Value / 100 * FIFTH_BRACKET) +
                          (SixthBracket.Value / 100 * SIXTH_BRACKET) +
                          (CorporateTaxRate.Value / 100 * TAXABLE_CORPORATE_PROFITS);
+            surdef = totRev;
 
             var revenueFormat = String.Format("Total Revenue: ${0:0.00} Billion", totRev);
             TotalRevenue.Text = revenueFormat;
         }
 
-        
-
         private void TotalSpending_ValueChanged(object sender, ValueChangedEventArgs e)
         {
+            double totSpend = HealthMan.Value + SocialSecurityMan.Value + AgricultureMan.Value + VeteransMan.Value + TransportationMan.Value
+                              + MilitaryDisc.Value + VeteransDisc.Value + EducationDisc.Value + GovernmentDisc.Value + HousingDisc.Value
+                              + HealthDisc.Value + AffairsDisc.Value + EnergyDisc.Value + SocialSecurityDisc.Value + ScienceDisc.Value
+                              + TransportationDisc.Value + AgricultureDisc.Value + Interest.Value;
+
+            var spendingFormat = String.Format("Total Spending: ${0:0.00} Billion", totSpend);
+            TotalSpending.Text = spendingFormat;
+        }
+
+        private void RevenueMinusSpending(object sender, ValueChangedEventArgs e)
+        {
+            double totRev = (FirstBracket.Value / 100 * FIRST_BRACKET) +
+                         (SecondBracket.Value / 100 * SECOND_BRACKET) +
+                         (ThirdBracket.Value / 100 * THIRD_BRACKET) +
+                         (FourthBracket.Value / 100 * FOURTH_BRACKET) +
+                         (FifthBracket.Value / 100 * FIFTH_BRACKET) +
+                         (SixthBracket.Value / 100 * SIXTH_BRACKET) +
+                         (CorporateTaxRate.Value / 100 * TAXABLE_CORPORATE_PROFITS);
+
+            double totSpend = HealthMan.Value + SocialSecurityMan.Value + AgricultureMan.Value + VeteransMan.Value + TransportationMan.Value
+                             + MilitaryDisc.Value + VeteransDisc.Value + EducationDisc.Value + GovernmentDisc.Value + HousingDisc.Value
+                             + HealthDisc.Value + AffairsDisc.Value + EnergyDisc.Value + SocialSecurityDisc.Value + ScienceDisc.Value
+                             + TransportationDisc.Value + AgricultureDisc.Value + Interest.Value;
+
+            if ((totRev - totSpend) > 0)
+            {
+                var spendingFormat = String.Format("Surplus of: ${0:0.00} Billion", totRev - totSpend);
+                SurplusBalanceDeficit.Text = spendingFormat;
+            }
+            else if ((totRev - totSpend) < 0)
+            {
+                var spendingFormat = String.Format("Deficit of: ${0:0.00} Billion", totSpend - totRev);
+                SurplusBalanceDeficit.Text = spendingFormat;
+            }
+            else
+            {
+                var spendingFormat = String.Format("Budget Balanced");
+                SurplusBalanceDeficit.Text = spendingFormat;
+            }
+
 
         }
     }

@@ -103,8 +103,8 @@
 
                     <!-- Revenue -->
 
-                    
-                    <Slider x:Name="FirstBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+
+                    <Slider x:Name="FirstBracket" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="1" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="4">
                     </Slider>
@@ -113,7 +113,7 @@
                         Text="First Bracket">
                     </Label>
 
-                    <Slider x:Name="SecondBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                    <Slider x:Name="SecondBracket" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="3" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="16">
                     </Slider>
@@ -122,7 +122,7 @@
                         Text="Second Bracket">
                     </Label>
 
-                    <Slider x:Name="ThirdBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                    <Slider x:Name="ThirdBracket" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="5" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="18">
                     </Slider>
@@ -131,7 +131,7 @@
                         Text="Third Bracket">
                     </Label>
 
-                    <Slider x:Name="FourthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                    <Slider x:Name="FourthBracket" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="7" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="21">
                     </Slider>
@@ -140,7 +140,7 @@
                         Text="Fourth Bracket">
                     </Label>
 
-                    <Slider x:Name="FifthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                    <Slider x:Name="FifthBracket" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="9" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="24">
                     </Slider>
@@ -149,7 +149,7 @@
                         Text="Fifth Bracket">
                     </Label>
 
-                    <Slider x:Name="SixthBracket" ValueChanged="TotalSliderRevenue_ValueChanged"
+                    <Slider x:Name="SixthBracket" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="11" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="27">
                     </Slider>
@@ -158,7 +158,7 @@
                         Text="Sixth Bracket">
                     </Label>
 
-                    <Slider x:Name="CorporateTaxRate" ValueChanged="TotalSliderRevenue_ValueChanged"
+                    <Slider x:Name="CorporateTaxRate" ValueChanged="TotalRevenue_ValueChanged"
                         Grid.Row="13" Grid.Column="0"
                         Minimum="0" Maximum="100" Value="35">
                     </Slider>
@@ -180,45 +180,45 @@
                         Text="Mandatory Spending" FontSize="Small" Font="Bold">
                     </Label>
 
-                    <Slider
-                        Grid.Row="1" Grid.Column="1" ValueChanged="TotalSpending_ValueChanged"
-                        Minimum="0" Maximum="2" Value="0.966">
+                    <Slider x:Name="HealthMan" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="1" Grid.Column="1"
+                        Minimum="0" Maximum="2000" Value="1120">
                     </Slider>
                     <Label
                         Grid.Row="2" Grid.Column="1"
-                        Text="Medicare and Health">
+                        Text="Medicare &amp; Health">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="SocialSecurityMan" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="1" Grid.Column="2"
-                        Minimum="0" Maximum="2" Value="0.939">
+                        Minimum="0" Maximum="2000" Value="1360">
                     </Slider>
                     <Label
                         Grid.Row="2" Grid.Column="2"
                         Text="Social Security, Unemployment &amp; Labour">
                     </Label>
 
-                    <Slider
+                    <Slider x:Name="AgricultureMan" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="3" Grid.Column="1"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="126">
                     </Slider>
                     <Label
                         Grid.Row="4" Grid.Column="1"
                         Text="Food &amp; Agriculture">
                     </Label>
 
-                    <Slider
+                    <Slider x:Name="VeteransMan" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="3" Grid.Column="2"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="104">
                     </Slider>
                     <Label
                         Grid.Row="4" Grid.Column="2"
                         Text="Veterans' Benefits">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="TransportationMan" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="5" Grid.Column="1"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="84">
                     </Slider>
                     <Label
                         Grid.Row="6" Grid.Column="1"
@@ -229,71 +229,136 @@
                         Text="Discretionary Spending" FontSize="Small" Font="Bold">
                     </Label>
                     
-                    <Slider
+                    <Slider x:Name="MilitaryDisc" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="8" Grid.Column="1"
-                        Minimum="0.0" Maximum="1000.0" Value="700.0">
+                        Minimum="0" Maximum="2000" Value="623">
                     </Slider>
                     <Label
                         Grid.Row="9" Grid.Column="1"
                         Text="Military">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="VeteransDisc" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="8" Grid.Column="2"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="75">
                     </Slider>
                     <Label
                         Grid.Row="9" Grid.Column="2"
                         Text="Veterans' Benefits">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="EducationDisc" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="10" Grid.Column="1"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="73">
                     </Slider>
                     <Label
                         Grid.Row="11" Grid.Column="1"
                         Text="Education">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="GovernmentDisc" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="10" Grid.Column="2"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="69">
                     </Slider>
                     <Label
                         Grid.Row="11" Grid.Column="2"
                         Text="Government">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="HousingDisc" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="12" Grid.Column="1"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="69">
                     </Slider>
                     <Label
                         Grid.Row="13" Grid.Column="1"
                         Text="Housing &amp; Community">
                     </Label>
-                    
-                    <Slider
+
+                    <Slider x:Name="HealthDisc" ValueChanged="TotalSpending_ValueChanged"
                         Grid.Row="12" Grid.Column="2"
-                        Minimum="0" Maximum="100" Value="50">
+                        Minimum="0" Maximum="1000" Value="59">
                     </Slider>
                     <Label
                         Grid.Row="13" Grid.Column="2"
                         Text="Medicare &amp; Health">
                     </Label>
 
+                    <Slider x:Name="AffairsDisc" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="14" Grid.Column="1"
+                        Minimum="0" Maximum="1000" Value="41">
+                    </Slider>
+                    <Label
+                        Grid.Row="15" Grid.Column="1"
+                        Text="International Affairs">
+                    </Label>
+
+                    <Slider x:Name="EnergyDisc" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="14" Grid.Column="2"
+                        Minimum="0" Maximum="1000" Value="41">
+                    </Slider>
+                    <Label
+                        Grid.Row="15" Grid.Column="2"
+                        Text="Energy &amp; Environment">
+                    </Label>
+
+                    <Slider x:Name="SocialSecurityDisc" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="16" Grid.Column="1"
+                        Minimum="0" Maximum="1000" Value="32">
+                    </Slider>
+                    <Label
+                        Grid.Row="17" Grid.Column="1"
+                        Text="Social Security, Unemployment &amp; Labour">
+                    </Label>
+
+                    <Slider x:Name="ScienceDisc" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="16" Grid.Column="2"
+                        Minimum="0" Maximum="1000" Value="31">
+                    </Slider>
+                    <Label
+                        Grid.Row="17" Grid.Column="2"
+                        Text="Science">
+                    </Label>
+
+                    <Slider x:Name="TransportationDisc" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="18" Grid.Column="1"
+                        Minimum="0" Maximum="1000" Value="25">
+                    </Slider>
+                    <Label
+                        Grid.Row="19" Grid.Column="1"
+                        Text="Transportation">
+                    </Label>
+
+                    <Slider x:Name="AgricultureDisc" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="18" Grid.Column="2"
+                        Minimum="0" Maximum="1000" Value="13">
+                    </Slider>
+                    <Label
+                        Grid.Row="19" Grid.Column="2"
+                        Text="Food &amp; Agriculture">
+                    </Label>
+
+                    <Slider x:Name="Interest" ValueChanged="TotalSpending_ValueChanged"
+                        Grid.Row="20" Grid.Column="1"
+                        Maximum="303" Minimum="302.999" Value="303">
+                    </Slider>
+                    <Label
+                        Grid.Row="21" Grid.Column="1"
+                        Text="Interest">
+                    </Label>
+
+                    <Label x:Name="TotalSpending" Text="Total Spending:"
+                        Grid.Row="22" Grid.Column="1"
+                        FontSize="Medium">
+                    </Label>
 
 
-
-
-           
-
-            </Grid>
+                </Grid>
                 </StackLayout>
 
 
-                    <Button Text="Submit to Congress" HorizontalOptions="Center"></Button>
+            <Button Clicked="RevenueMinusSpending" Text="Submit to Congress" HorizontalOptions="Center"></Button>
+
+            <Label x:Name="SurplusBalanceDeficit" FontSize="Medium" Text="Surplus/Deficit" HorizontalOptions="Center"></Label>
 
             <Button x:Name="statisticsPage" Text="Statistics" HorizontalOptions="Center" Clicked="statisticsPage_Clicked"></Button>
 
