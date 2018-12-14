@@ -4,20 +4,39 @@
              xmlns:local="clr-namespace:AppProject"
              x:Class="AppProject.MainPage">
     <ScrollView>
+        
         <StackLayout>
 
-            <Label Text="Balance the Budget" HorizontalOptions="CenterAndExpand" FontSize="Large">
-            </Label>
+            <Grid HorizontalOptions="CenterAndExpand"
+                VerticalOptions="Start">
 
-            <Label Text="GDP: $20.66 Trillion Debt: $21.6 Trillion" HorizontalOptions="CenterAndExpand" FontSize="Large">
-            </Label>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
 
-            <Label Text="Debt to GDP Ratio: 105%" HorizontalOptions="CenterAndExpand" FontSize="Large">
-            </Label>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
-            <Label Text="Employed: 156,562,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large">
-            </Label>
+                <!--<Image Source="Images/us-constitution.jpg" Aspect="AspectFit"></Image>-->
 
+                <StackLayout>
+                <Label Text="Balance the Budget" HorizontalOptions="CenterAndExpand" FontSize="Large">
+                </Label>
+
+                <Label Text="GDP: $20.66 Trillion Debt: $21.6 Trillion" HorizontalOptions="CenterAndExpand" FontSize="Large">
+                </Label>
+
+                <Label Text="Debt to GDP Ratio: 105%" HorizontalOptions="CenterAndExpand" FontSize="Large">
+                </Label>
+
+                <Label Text="Employed: 156,562,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large">
+                </Label>
+                </StackLayout>
+            </Grid>
+                
+                
+                
             <StackLayout>
 
                 <Grid
@@ -37,7 +56,7 @@
                         <ColumnDefinition Width="50*"></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                        <Label
+                    <Label
                         Grid.Row="1" Grid.Column="0"
                         Text="Revenue in Trillions USD"
                         FontAttributes="Bold"
@@ -48,7 +67,7 @@
 
                     <Label
                         Grid.Row="1" Grid.Column="1"
-                        Text="Expenditure in Trillions USD"
+                        Text="Expenditure in Billions USD"
                         FontAttributes="Bold"
                         HorizontalOptions="Center"
                         BackgroundColor="Red"
@@ -160,23 +179,23 @@
                     <Label Grid.Row="0" Grid.Column="1"
                         Text="Mandatory Spending" FontSize="Small" Font="Bold">
                     </Label>
-               
+
                     <Slider
                         Grid.Row="1" Grid.Column="1" ValueChanged="TotalSpending_ValueChanged"
                         Minimum="0" Maximum="2" Value="0.966">
                     </Slider>
                     <Label
                         Grid.Row="2" Grid.Column="1"
-                        Text="Medicare and Medicaid">
+                        Text="Medicare and Health">
                     </Label>
-                
+                    
                     <Slider
                         Grid.Row="1" Grid.Column="2"
                         Minimum="0" Maximum="2" Value="0.939">
                     </Slider>
                     <Label
                         Grid.Row="2" Grid.Column="2"
-                        Text="Social Security">
+                        Text="Social Security, Unemployment &amp; Labour">
                     </Label>
 
                     <Slider
@@ -185,7 +204,7 @@
                     </Slider>
                     <Label
                         Grid.Row="4" Grid.Column="1"
-                        Text="Income Security">
+                        Text="Food &amp; Agriculture">
                     </Label>
 
                     <Slider
@@ -194,7 +213,7 @@
                     </Slider>
                     <Label
                         Grid.Row="4" Grid.Column="2"
-                        Text="Income Security">
+                        Text="Veterans' Benefits">
                     </Label>
                     
                     <Slider
@@ -203,216 +222,72 @@
                     </Slider>
                     <Label
                         Grid.Row="6" Grid.Column="1"
-                        Text="Income Security">
+                        Text="Transportation">
                     </Label>
 
+                    <Label Grid.Row="7" Grid.Column="1"
+                        Text="Discretionary Spending" FontSize="Small" Font="Bold">
+                    </Label>
+                    
                     <Slider
-                        Grid.Row="7" Grid.Column="2"
+                        Grid.Row="8" Grid.Column="1"
+                        Minimum="0.0" Maximum="1000.0" Value="700.0">
+                    </Slider>
+                    <Label
+                        Grid.Row="9" Grid.Column="1"
+                        Text="Military">
+                    </Label>
+                    
+                    <Slider
+                        Grid.Row="8" Grid.Column="2"
                         Minimum="0" Maximum="100" Value="50">
                     </Slider>
                     <Label
-                        Grid.Row="8" Grid.Column="2"
-                        Text="Income Security">
+                        Grid.Row="9" Grid.Column="2"
+                        Text="Veterans' Benefits">
+                    </Label>
+                    
+                    <Slider
+                        Grid.Row="10" Grid.Column="1"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="11" Grid.Column="1"
+                        Text="Education">
+                    </Label>
+                    
+                    <Slider
+                        Grid.Row="10" Grid.Column="2"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="11" Grid.Column="2"
+                        Text="Government">
+                    </Label>
+                    
+                    <Slider
+                        Grid.Row="12" Grid.Column="1"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="13" Grid.Column="1"
+                        Text="Housing &amp; Community">
+                    </Label>
+                    
+                    <Slider
+                        Grid.Row="12" Grid.Column="2"
+                        Minimum="0" Maximum="100" Value="50">
+                    </Slider>
+                    <Label
+                        Grid.Row="13" Grid.Column="2"
+                        Text="Medicare &amp; Health">
                     </Label>
 
 
 
 
 
-                    <!--<Slider
-                Grid.Row="5"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="6"
-                Grid.Column="1"
-                Text="Defense">
-                </Label>
-
-                
-
-                <Slider
-                Grid.Row="9"
-                Grid.Column="1"
-                Minimum="0" Maximum="3" Value="3">
-                </Slider>
-                <Label
-                Grid.Row="10"
-                Grid.Column="1"
-                Text="Net Interest">
-                </Label>
-
-                
-
-                <Slider
-                Grid.Row="13"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="14"
-                Grid.Column="1"
-                Text="General Government">
-                </Label>
-
-
-                <Slider
-                Grid.Row="15"
-                Grid.Column="1"
-                Minimum="0" Maximum="100">
-                </Slider>
-                <Label
-                Grid.Row="16"
-                Grid.Column="1"
-                Text="Unreported Data">
-                </Label>
-
-                <Slider
-                Grid.Row="17"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="18"
-                Grid.Column="1"
-                Text="General Government">
-                </Label>
-
-                <Slider
-                Grid.Row="19"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="20"
-                Grid.Column="1"
-                Text="Veterans Benefits and Services">
-                </Label>
-
-                <Slider
-                Grid.Row="21"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="22"
-                Grid.Column="1"
-                Text="International Affairs">
-                </Label>
-
-                <Slider
-                Grid.Row="23"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="24"
-                Grid.Column="1"
-                Text="Education, Training, Employment, and Social Services">
-                </Label>
-
-                <Slider
-                Grid.Row="25"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="26"
-                Grid.Column="1"
-                Text="Transportation">
-                </Label>
-
-                <Slider
-                Grid.Row="27"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="28"
-                Grid.Column="1"
-                Text="Community and Regional Development">
-                </Label>
-
-                <Slider
-                Grid.Row="29"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="30"
-                Grid.Column="1"
-                Text="Administration of Justice">
-                </Label>
-
-                <Slider
-                Grid.Row="31"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="32"
-                Grid.Column="1"
-                Text="Natural Resources and Environment">
-                </Label>
-
-
-                <Slider
-                Grid.Row="33"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="34"
-                Grid.Column="1"
-                Text="Commerce and Housing Credit">
-                </Label>
-
-
-                <Slider
-                Grid.Row="35"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="36"
-                Grid.Column="1"
-                Text="General Science, Space, and Technology">
-                </Label>
-
-                <Slider
-                Grid.Row="37"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="38"
-                Grid.Column="1"
-                Text="Agriculture">
-                </Label>
-
-                <Slider
-                Grid.Row="39"
-                Grid.Column="1"
-                Minimum="0" Maximum="100"
-                >
-                </Slider>
-                <Label
-                Grid.Row="40"
-                Grid.Column="1"
-                Text="Energy">
-                </Label>-->
+           
 
             </Grid>
                 </StackLayout>
