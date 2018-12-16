@@ -10,15 +10,17 @@ namespace AppProject
 {
     public partial class MainPage : ContentPage
     {
-        const double FIRST_BRACKET = 1128.1861937619655392469687300574; // 1128.00
-        const double SECOND_BRACKET = 1050.4428496729419272495213784301; // 1050.00
-        const double THIRD_BRACKET = 1415.0590024994678649042756860242; // 1415.00
-        const double FOURTH_BRACKET = 902.68597286291666655520102105934; // 903.00
-        const double FIFTH_BRACKET = 1364.8656981227401759380982769623; // 1365.00
-        const double SIXTH_BRACKET = 2233.7009578222122864613911933631; //2234.00
-        const double PAYROLL = 7753.3333333333333333333333333333; // 7753.00
-        const double TAXABLE_CORPORATE_PROFITS = 848.57142857142857142857142857143; // 849.00
-        const double MISC_REVENUE = 269;
+        const double FIRST_BRACKET = 1304.2614956785728777421603815692; // 1128.00
+        const double SECOND_BRACKET = 1214.3847973097594534676547727516; // 1050.00
+        const double THIRD_BRACKET = 1635.9063612710611154962724693922; // 1415.00
+        const double FOURTH_BRACKET = 1043.567598685452793705434706427; // 903.00
+        const double FIFTH_BRACKET = 1577.8794197950753479053159271241; // 1365.00
+        const double SIXTH_BRACKET = 2582.3132460372396375276198767204; //2234.00
+        const double PAYROLL = 8146.6666666666666666666666666667;
+        const double TAXABLE_CORPORATE_PROFITS = 1014.2857142857142857142857142857; // 1014.00
+        const double MISC_REVENUE = 294.00;
+
+        const double INTEREST_PAYMENTS = 316.00;
 
         public MainPage()
         {
@@ -49,9 +51,8 @@ namespace AppProject
         private void TotalSpending_ValueChanged(object sender, ValueChangedEventArgs e)
         {
             double totSpend = HealthMan.Value + SocialSecurityMan.Value + AgricultureMan.Value + VeteransMan.Value + TransportationMan.Value
-                              + MilitaryDisc.Value + VeteransDisc.Value + EducationDisc.Value + GovernmentDisc.Value + HousingDisc.Value
-                              + HealthDisc.Value + AffairsDisc.Value + EnergyDisc.Value + SocialSecurityDisc.Value + ScienceDisc.Value
-                              + TransportationDisc.Value + AgricultureDisc.Value + Interest.Value;
+                              + MilitaryDisc.Value + EducationDisc.Value + GovernmentDisc.Value + HousingDisc.Value + AffairsDisc.Value
+                              + EnergyDisc.Value + ScienceDisc.Value + INTEREST_PAYMENTS;
 
             var spendingFormat = String.Format("Total Spending: ${0:0.00} Billion", totSpend);
             TotalSpending.Text = spendingFormat;
@@ -70,9 +71,8 @@ namespace AppProject
                          (MISC_REVENUE);
 
             double totSpend = HealthMan.Value + SocialSecurityMan.Value + AgricultureMan.Value + VeteransMan.Value + TransportationMan.Value
-                             + MilitaryDisc.Value + VeteransDisc.Value + EducationDisc.Value + GovernmentDisc.Value + HousingDisc.Value
-                             + HealthDisc.Value + AffairsDisc.Value + EnergyDisc.Value + SocialSecurityDisc.Value + ScienceDisc.Value
-                             + TransportationDisc.Value + AgricultureDisc.Value + Interest.Value;
+                             + MilitaryDisc.Value + EducationDisc.Value + GovernmentDisc.Value + HousingDisc.Value + AffairsDisc.Value
+                             + EnergyDisc.Value + ScienceDisc.Value + INTEREST_PAYMENTS;
 
             if ((totRev - totSpend) > 0)
             {
