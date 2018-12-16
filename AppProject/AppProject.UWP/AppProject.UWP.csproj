@@ -132,7 +132,13 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Images\chart1debt.jpg" />
     <Content Include="Images\congress.png" />
+    <Content Include="Images\constitution.jpg" />
+    <Content Include="Images\test.jpg" />
+    <Content Include="Images\test1.png" />
     <Content Include="Images\us-constitution.jpg" />
+    <Content Include="Images\us-constitution1.jpg" />
+    <Content Include="Images\We-The-People.jpg" />
+    <Content Include="Images\wethepeople.jpg" />
     <Content Include="Properties\Default.rd.xml" />
   </ItemGroup>
   <ItemGroup>
