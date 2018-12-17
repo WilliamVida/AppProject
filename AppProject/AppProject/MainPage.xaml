@@ -22,18 +22,14 @@
                     </Grid.ColumnDefinitions>
 
                     <StackLayout>
-                        
-                        <Label Text="Balance the Budget" HorizontalOptions="CenterAndExpand" FontSize="Large">
-                        </Label>
 
-                        <Label Text="GDP: $20.66 Trillion Debt: $21.6 Trillion" HorizontalOptions="CenterAndExpand" FontSize="Large">
-                        </Label>
+                        <Label Text="Balance the Budget" HorizontalOptions="CenterAndExpand" FontSize="Large"></Label>
 
-                        <Label Text="Debt to GDP Ratio: 105%" HorizontalOptions="CenterAndExpand" FontSize="Large">
-                        </Label>
+                        <Label Text="GDP: $20.66 Trillion Debt: $21.6 Trillion" HorizontalOptions="CenterAndExpand" FontSize="Large"></Label>
 
-                        <Label Text="Employed: 156,795,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large">
-                        </Label>
+                        <Label Text="Debt to GDP Ratio: 105%" HorizontalOptions="CenterAndExpand" FontSize="Large"></Label>
+
+                        <Label Text="Employed: 156,795,000 Unemployment Rate: 3.7%" HorizontalOptions="CenterAndExpand" FontSize="Large"></Label>
                         
                     </StackLayout>
                     
@@ -94,7 +90,7 @@
                                 Minimum="0" Maximum="100" Value="4">
                         </Slider>
                         <Label Grid.Row="2" Grid.Column="0"
-                               Text="First Bracket">
+                               Text="Up to $40,000 annually">
                         </Label>
 
                         <Slider x:Name="SecondBracket" ValueChanged="TotalRevenue_ValueChanged"
@@ -102,7 +98,7 @@
                                 Minimum="0" Maximum="100" Value="16">
                         </Slider>
                         <Label Grid.Row="4" Grid.Column="0"
-                               Text="Second Bracket">
+                               Text="Up to $80,000 annually">
                         </Label>
 
                         <Slider x:Name="ThirdBracket" ValueChanged="TotalRevenue_ValueChanged"
@@ -110,7 +106,7 @@
                                 Minimum="0" Maximum="100" Value="18">
                         </Slider>
                         <Label Grid.Row="6" Grid.Column="0"
-                               Text="Third Bracket">
+                               Text="Up to $140,000 annually">
                         </Label>
                         
                         <Slider x:Name="FourthBracket" ValueChanged="TotalRevenue_ValueChanged"
@@ -118,7 +114,7 @@
                                 Minimum="0" Maximum="100" Value="21">
                         </Slider>
                         <Label  Grid.Row="8" Grid.Column="0"
-                                Text="Fourth Bracket">
+                                Text="Up to $200,000 annually">
                         </Label>
 
                         <Slider x:Name="FifthBracket" ValueChanged="TotalRevenue_ValueChanged"
@@ -126,7 +122,7 @@
                                 Minimum="0" Maximum="100" Value="24">
                         </Slider>
                         <Label Grid.Row="10" Grid.Column="0"
-                               Text="Fifth Bracket">
+                               Text="Up to $500,000 annually">
                         </Label>
                            
                         <Slider x:Name="SixthBracket" ValueChanged="TotalRevenue_ValueChanged"
@@ -134,7 +130,7 @@
                                 Minimum="0" Maximum="100" Value="27">
                         </Slider>
                         <Label Grid.Row="12" Grid.Column="0"
-                               Text="Sixth Bracket">
+                               Text="More than $500,000 annually">
                         </Label>
 
                         <Slider x:Name="PayrollRate" ValueChanged="TotalRevenue_ValueChanged"
@@ -224,8 +220,8 @@
                                 Grid.Row="8" Grid.Column="2"
                                 Minimum="0" Maximum="1500" Value="85">
                         </Slider>
-                        <Label  Grid.Row="9" Grid.Column="2"
-                                Text="Education">
+                        <Label Grid.Row="9" Grid.Column="2"
+                               Text="Education">
                         </Label>
                       
                        <Slider x:Name="GovernmentDisc" ValueChanged="TotalSpending_ValueChanged"
@@ -269,7 +265,7 @@
                         </Label>
                        
                         <Label Grid.Row="17" Grid.Column="1"
-                               Text="Interest payment of $316 billion">
+                               Text="Interest payment of $316 billion.">
                         </Label>
 
                         <Label x:Name="TotalSpending"
@@ -285,8 +281,16 @@
 
                 <Label x:Name="SurplusBalanceDeficit" FontSize="Medium" Text="Surplus/Deficit" HorizontalOptions="Center"></Label>
 
-                <Button x:Name="statisticsPage" Text="Statistics" HorizontalOptions="Center" Clicked="statisticsPage_Clicked"></Button>
+                <Label Text="Note: if taxes are high, there will be less revenue during the fiscal year than what is shown" HorizontalOptions="Center" FontSize="Micro"></Label>
 
+                <Label Text="Statistics" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Large"></Label>
+
+                <Label Text="The people approve of" FontAttributes="Bold"></Label>
+                <Label x:Name="like"></Label>
+                
+                <Label Text="The people disapprove of" FontAttributes="Bold"></Label>
+                <Label x:Name="dislike"></Label>
+                
             </StackLayout>
 
         </ScrollView>
