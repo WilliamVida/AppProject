@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:AppProject"
              x:Class="AppProject.MainPage"
-             BackgroundColor="#ffff88   ">
+             BackgroundImage="Images/us-constitution.jpg">
+    <!--BackgroundColor="#ffff88"-->
     
     <ContentPage.Content>
         
@@ -14,11 +15,15 @@
                 <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="Start">
                       
                     <Grid.RowDefinitions>
+                        
                         <RowDefinition Height="Auto"></RowDefinition>
+                        
                     </Grid.RowDefinitions>
 
                     <Grid.ColumnDefinitions>
+                        
                         <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        
                     </Grid.ColumnDefinitions>
 
                     <StackLayout>
@@ -42,13 +47,17 @@
                           Margin="10, 10, 10, 10">
 
                         <Grid.RowDefinitions>
+                            
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
+                            
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
+                            
                             <ColumnDefinition Width="50*"></ColumnDefinition>
                             <ColumnDefinition Width="50*"></ColumnDefinition>
+                            
                         </Grid.ColumnDefinitions>
 
                         <Label Grid.Row="1" Grid.Column="0"
@@ -72,15 +81,19 @@
                           Margin="10, 10, 10, 10">
 
                         <Grid.RowDefinitions>
+                            
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
                             <RowDefinition Height="Auto"></RowDefinition>
+                            
                         </Grid.RowDefinitions>
 
                         <Grid.ColumnDefinitions>
+                            
                             <ColumnDefinition Width="50*"></ColumnDefinition>
                             <ColumnDefinition Width="25*"></ColumnDefinition>
                             <ColumnDefinition Width="25*"></ColumnDefinition>
+                            
                         </Grid.ColumnDefinitions>
 
                         <!-- Revenue -->
@@ -277,7 +290,7 @@
                     
                 </StackLayout>
 
-                <Button Clicked="RevenueMinusSpending" Text="Submit to Congress" HorizontalOptions="Center"></Button>
+                <Button Clicked="RevenueMinusSpending" Text="Submit to Congress" HorizontalOptions="Center" BackgroundColor="Gray"></Button>
 
                 <Label x:Name="SurplusBalanceDeficit" FontSize="Medium" Text="Surplus/Deficit" HorizontalOptions="Center"></Label>
 
@@ -285,11 +298,19 @@
 
                 <Label Text="Statistics" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="Large"></Label>
 
-                <Label Text="The people approve of" FontAttributes="Bold"></Label>
-                <Label x:Name="like"></Label>
-                
-                <Label Text="The people disapprove of" FontAttributes="Bold"></Label>
-                <Label x:Name="dislike"></Label>
+                <StackLayout Margin="10, 10, 10, 10">
+                    
+                    <Label x:Name="ApprovalRating" HorizontalOptions="StartAndExpand" FontAttributes="Bold"></Label>
+
+                    <Label x:Name="CurrentDebt" HorizontalOptions="StartAndExpand"></Label>
+
+                    <Label Text="The people approve of" FontAttributes="Bold"></Label>
+                    <Label x:Name="like"></Label>
+
+                    <Label Text="The people disapprove of" FontAttributes="Bold"></Label>
+                    <Label x:Name="dislike"></Label>
+                    
+                </StackLayout>
                 
             </StackLayout>
 
