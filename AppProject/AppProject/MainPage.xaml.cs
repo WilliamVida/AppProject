@@ -79,7 +79,7 @@ namespace AppProject
             }
             else if ((totRev - totSpend) < 0)
             {
-                var budgetFormat = String.Format("Deficit of: ${0:0.00} Billion, as percentage of GDP: %{1:0.00}", totSpend - totRev, (totSpend - totRev) / 20660.00 * 100);
+                var budgetFormat = String.Format("Deficit of: ${0:0.00} Billion, as percentage of GDP: {1:0.00}%", totSpend - totRev, (totSpend - totRev) / 20660.00 * 100);
                 SurplusBalanceDeficit.Text = budgetFormat;
             }
             else
@@ -87,51 +87,6 @@ namespace AppProject
                 var budgetFormat = String.Format("Budget Balanced");
                 SurplusBalanceDeficit.Text = budgetFormat;
             }
-
-            if (MilitaryDisc.Value > 623)
-            {
-                var opinion = String.Format("Military budget increased.\n");
-                like.Text += opinion;
-            }
-            else if (MilitaryDisc.Value < 623)
-            {
-                var opinion = String.Format("Military budget cut.\n");
-                dislike.Text += opinion;
-            }
-
-            if (HealthMan.Value > 1179)
-            {
-                var opinion = String.Format("Heath spending increased.\n");
-                like.Text += opinion;
-            }
-            else if (HealthMan.Value < 1179)
-            {
-                var opinion = String.Format("Heath spending cut.\n");
-                dislike.Text += opinion;
-            }
-        
-            if (SocialSecurityMan.Value > 1392)
-            {
-                var opinion = String.Format("Social Security spending increased.\n");
-                like.Text += opinion;
-            }
-            else if (SocialSecurityMan.Value < 1392)
-            {
-                var opinion = String.Format("Social Security spending cut.\n");
-                dislike.Text += opinion;
-            }
-
-            if (VeteransMan.Value > 179)
-            {
-                var opinion = String.Format("Veterans' Benefits spending increased.\n");
-                like.Text += opinion;
-            }
-            else if (VeteransMan.Value > 179)
-            {
-                var opinion = String.Format("Veterans' Benefits spending cut.\n");
-                dislike.Text += opinion;
-            }
-
 
             if (FirstBracket.Value < 4)
             {
@@ -146,49 +101,186 @@ namespace AppProject
 
             if (SecondBracket.Value < 16 || ThirdBracket.Value < 18)
             {
-                var opinion = String.Format("Middle class tax cuts.");
+                var opinion = String.Format("Middle class tax cuts.\n");
                 like.Text += opinion;
             }
             else if (SecondBracket.Value > 16 || ThirdBracket.Value > 18)
             {
-                var opinion = String.Format("Middle class tax hikes.");
+                var opinion = String.Format("Middle class tax hikes.\n");
                 dislike.Text += opinion;
             }
 
             if (FourthBracket.Value < 21 || FifthBracket.Value < 24 || SixthBracket.Value < 27)
             {
-                var opinion = String.Format("Tax cuts for the rich.");
+                var opinion = String.Format("Tax cuts for the rich.\n");
+                dislike.Text += opinion;
+                var opinion2 = String.Format("Some people believe that lower taxes for the rich will encourage them to invest causing more employment and better growth.\n");
+                dislike.Text += opinion2;
+            }
+
+            if (FourthBracket.Value >= 25 || FifthBracket.Value >= 28 || SixthBracket.Value >= 34)
+            {
+                var opinion = String.Format("Tax rate is too high for the rich that could cause them to engage in tax evasion.\n");
+                dislike.Text += opinion;
+                var opinion2 = String.Format("Some people believe that rich people are paying their fair share of taxes.\n");
+                like.Text += opinion2;
+            }
+
+            if (PayrollRate.Value > 15)
+            {
+                var opinion = String.Format("Payroll tax increase.\n");
+                dislike.Text += opinion;
+            }
+            else if (PayrollRate.Value < 15)
+            {
+                var opinion = String.Format("Payroll tax cut.\n");
+                like.Text += opinion;
+            }
+            else
+            {
+
+            }
+
+            if (CorporateTaxRate.Value >= 35)
+            {
+                var opinion = String.Format("Some people believe that corporations should be paying more in taxes.\n");
+                like.Text += opinion;
+                var opinion2 = String.Format("Some people believe that companies are paying too much in taxes which is putting off investment in the US and/or causing them to engage in tax evasion.\n");
+                dislike.Text += opinion2;
+            }
+            else if (CorporateTaxRate.Value < 35)
+            {
+                var opinion = String.Format("Some people believe that corporations should be paying less in taxes to attract more companies back in the US.\n");
+                like.Text += opinion;
+                var opinion2 = String.Format("Some people believe that companies are paying too little in taxes.\n");
+                dislike.Text += opinion2;
+            }
+
+
+
+            if (HealthMan.Value >= 1179)
+            {
+                var opinion = String.Format("\nHealth spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (HealthMan.Value < 1179)
+            {
+                var opinion = String.Format("Health spending cut.\n");
+                dislike.Text += opinion;
+            }
+
+            if (SocialSecurityMan.Value >= 1392)
+            {
+                var opinion = String.Format("Social Security spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (SocialSecurityMan.Value < 1392)
+            {
+                var opinion = String.Format("Social Security spending cut.\n");
+                dislike.Text += opinion;
+            }
+
+            if (AgricultureMan.Value >= 139)
+            {
+                var opinion = String.Format("Agriculture spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (AgricultureMan.Value < 1392)
+            {
+                var opinion = String.Format("Agriculture spending cut.\n");
+                dislike.Text += opinion;
+            }
+
+            if (VeteransMan.Value >= 179)
+            {
+                var opinion = String.Format("Veterans' Benefits spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (VeteransMan.Value > 179)
+            {
+                var opinion = String.Format("Veterans' Benefits spending cut.\n");
+                dislike.Text += opinion;
+            }
+
+            if (TransportationMan.Value >= 179)
+            {
+                var opinion = String.Format("Transportation spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (TransportationMan.Value > 179)
+            {
+                var opinion = String.Format("Transportation spending cut.\n");
+                dislike.Text += opinion;
+            }
+
+            if (MilitaryDisc.Value >= 900)
+            {
+                var opinion = String.Format("Many people think that the budget is too high.\n");
+                dislike.Text += opinion;
+            }
+            if (MilitaryDisc.Value >= 623)
+            {
+                var opinion = String.Format("Military budget increased.\n");
+                like.Text += opinion;
+            }
+            else if (MilitaryDisc.Value < 623)
+            {
+                var opinion = String.Format("Military budget cut.\n");
+                dislike.Text += opinion;
+            }
+
+            if (EducationDisc.Value >= 85)
+            {
+                var opinion = String.Format("Education spending increases.\n");
+                like.Text += opinion;
+            }
+            else if (EducationDisc.Value < 85)
+            {
+                var opinion = String.Format("Education spending cuts.\n");
+                dislike.Text += opinion;
+            }
+
+            if (GovernmentDisc.Value >= 69)
+            {
+                var opinion = String.Format("The people feel safer.\n");
+                like.Text += opinion;
+            }
+            else if (GovernmentDisc.Value < 69)
+            {
+                var opinion = String.Format("The people feel less safe.\n");
+                dislike.Text += opinion;
+            }
+
+            if (AffairsDisc.Value >= 41)
+            {
+                var opinion = String.Format("Foreign affairs spending increased.\n");
+                like.Text += opinion;
+                dislike.Text += opinion;
+            }
+
+            if (EnergyDisc.Value >= 51)
+            {
+                var opinion = String.Format("Energy spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (EnergyDisc.Value < 51)
+            {
+                var opinion = String.Format("Energy spending cut.\n");
+                dislike.Text += opinion;
+            } 
+
+            if (ScienceDisc.Value >= 31)
+            {
+                var opinion = String.Format("Science spending increased.\n");
+                like.Text += opinion;
+            }
+            else if (ScienceDisc.Value < 69)
+            {
+                var opinion = String.Format("Science spending cut.\n");
                 dislike.Text += opinion;
             }
 
         }
 
-        private void ApprovedActions()
-        {
-            // the people like your tax cuts
-            // ss increases
-            // education increases
-
-            if (MilitaryDisc.Value > 623)
-            {
-                var opinion = String.Format("Military increased");
-                like.Text = opinion;
-            }
-            if (HealthMan.Value > 1179)
-            {
-                var opinion = String.Format("Budget Balanced");
-                like.Text += opinion;
-            }
-        }
-
-        private void DisApprovedActions()
-        {
-            // tax increases
-            // health cuts
-            // ss cuts
-            // education cuts
-            // tax cuts for the wealthy
-            // tax cuts increased deficit
-        }
     }
 }
