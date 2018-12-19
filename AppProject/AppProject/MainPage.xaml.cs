@@ -98,10 +98,8 @@ namespace AppProject
                     EconomicApprovalRating += 15;
                 }
 
-                var DebtAfter = String.Format("Current debt: {0:0.00} billion, as percentage of GDP: {1:0.00}%\n", 21600.00 - (totRev - totSpend), (21600.00 - (totRev - totSpend)) / 20660.00 * 100);
+                var DebtAfter = String.Format("Current debt: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", 21600.00 - (totRev - totSpend), (21600.00 - (totRev - totSpend)) / 20660.00 * 100);
                 CurrentDebt.Text = DebtAfter;
-
-                //var DebtPaid = String.Format("Assuming an annual GDP growth of 2% and the surplus grows at the same rate the debt will be paid in {0:0.00}", (totRev - totSpend) / 20660.00 * 100);
             }
             else if ((totRev - totSpend) < 0)
             {
@@ -110,15 +108,15 @@ namespace AppProject
 
                 if ((totSpend - totRev) > 1000)
                 {
-                    EconomicApprovalRating += -75;
+                    EconomicApprovalRating += -100;
                 }
                 else if ((totSpend - totRev) > 750)
                 {
-                    EconomicApprovalRating += -60;
+                    EconomicApprovalRating += -100;
                 }
                 else if ((totSpend - totRev) > 500)
                 {
-                    EconomicApprovalRating += -40;
+                    EconomicApprovalRating += -60;
                 }
                 else if ((totSpend - totRev) > 250)
                 {
@@ -129,7 +127,7 @@ namespace AppProject
                     EconomicApprovalRating += -10;
                 }
 
-                var DebtAfter = String.Format("Current debt: {0:0.00} billion, as percentage of GDP: {1:0.00}%\n", 21600.00 - (totSpend - totRev), (21600.00 + (totSpend - totRev)) / 20660.00 * 100);
+                var DebtAfter = String.Format("Current debt: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", 21600.00 - (totSpend - totRev), (21600.00 + (totSpend - totRev)) / 20660.00 * 100);
                 SurplusBalanceDeficit.BackgroundColor = Color.Red;
                 CurrentDebt.Text = DebtAfter;
             }
@@ -139,7 +137,7 @@ namespace AppProject
                 SurplusBalanceDeficit.BackgroundColor = Color.Yellow;
                 SurplusBalanceDeficit.Text = budgetFormat;
 
-                var DebtAfter = String.Format("Current debt: {0:0.00} billion, as percentage of GDP: {1:0.00}%\n", 21600.00 - (totSpend - totRev), (21600.00 + (totSpend - totRev)) / 20660.00 * 100);
+                var DebtAfter = String.Format("Current debt: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", 21600.00 - (totSpend - totRev), (21600.00 + (totSpend - totRev)) / 20660.00 * 100);
                 CurrentDebt.Text = DebtAfter;
             }
 
@@ -193,7 +191,7 @@ namespace AppProject
             }
             
 
-            if (PayrollRate.Value > 20)
+            if (PayrollRate.Value >= 20)
             {
                 var opinion = String.Format("Payroll tax increase.\n");
                 dislike.Text += opinion;
@@ -261,6 +259,12 @@ namespace AppProject
                 var opinion = String.Format("Social Security spending increased.\n");
                 like.Text += opinion;
                 EconomicApprovalRating += 60;
+            }
+            else if (SocialSecurityMan.Value < 800)
+            {
+                var opinion = String.Format("Major Social Security spending cut.\n");
+                dislike.Text += opinion;
+                EconomicApprovalRating += -100;
             }
             else if (SocialSecurityMan.Value < 1000)
             {
@@ -332,7 +336,13 @@ namespace AppProject
                 like.Text += opinion;
                 EconomicApprovalRating += 60;
             }
-            else if (MilitaryDisc.Value < 600)
+            else if (MilitaryDisc.Value <= 500)
+            {
+                var opinion = String.Format("Military budget cut dramatically.\n");
+                dislike.Text += opinion;
+                EconomicApprovalRating += -90;
+            }
+            else if (MilitaryDisc.Value <= 600)
             {
                 var opinion = String.Format("Military budget cut.\n");
                 dislike.Text += opinion;
