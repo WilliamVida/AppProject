@@ -99,24 +99,26 @@ namespace AppProject
                 }
 
                 var DebtAfter = String.Format("Current debt: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", 21600.00 - (totRev - totSpend), (21600.00 - (totRev - totSpend)) / 20660.00 * 100);
+                CurrentDebt.BackgroundColor = Color.Green;
                 CurrentDebt.Text = DebtAfter;
             }
             else if ((totRev - totSpend) < 0)
             {
                 var budgetFormat = String.Format("Deficit: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", totSpend - totRev, (totSpend - totRev) / 20660.00 * 100);
+                SurplusBalanceDeficit.BackgroundColor = Color.Red;
                 SurplusBalanceDeficit.Text = budgetFormat;
 
                 if ((totSpend - totRev) > 1000)
                 {
-                    EconomicApprovalRating += -100;
+                    EconomicApprovalRating += -150;
                 }
                 else if ((totSpend - totRev) > 750)
                 {
-                    EconomicApprovalRating += -100;
+                    EconomicApprovalRating += -125;
                 }
                 else if ((totSpend - totRev) > 500)
                 {
-                    EconomicApprovalRating += -60;
+                    EconomicApprovalRating += -75;
                 }
                 else if ((totSpend - totRev) > 250)
                 {
@@ -128,7 +130,7 @@ namespace AppProject
                 }
 
                 var DebtAfter = String.Format("Current debt: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", 21600.00 - (totSpend - totRev), (21600.00 + (totSpend - totRev)) / 20660.00 * 100);
-                SurplusBalanceDeficit.BackgroundColor = Color.Red;
+                CurrentDebt.BackgroundColor = Color.Red;
                 CurrentDebt.Text = DebtAfter;
             }
             else
@@ -138,6 +140,7 @@ namespace AppProject
                 SurplusBalanceDeficit.Text = budgetFormat;
 
                 var DebtAfter = String.Format("Current debt: ${0:0.00} billion, as percentage of GDP: {1:0.00}%", 21600.00 - (totSpend - totRev), (21600.00 + (totSpend - totRev)) / 20660.00 * 100);
+                CurrentDebt.BackgroundColor = Color.Yellow;
                 CurrentDebt.Text = DebtAfter;
             }
 
@@ -190,7 +193,6 @@ namespace AppProject
                 EconomicApprovalRating += 15;
             }
             
-
             if (PayrollRate.Value >= 20)
             {
                 var opinion = String.Format("Payroll tax increase.\n");

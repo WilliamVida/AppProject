@@ -178,7 +178,7 @@
 
                         <Slider x:Name="HealthMan" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="1" Grid.Column="1"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="2" Grid.Column="1"
                                Text="Medicare &amp; Health">
@@ -186,7 +186,7 @@
                        
                         <Slider x:Name="SocialSecurityMan" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="1" Grid.Column="2"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="2" Grid.Column="2"                      
                                Text="Social Security, Unemployment &amp; Labour">
@@ -194,7 +194,7 @@
 
                         <Slider x:Name="AgricultureMan" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="3" Grid.Column="1"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="4" Grid.Column="1"
                                Text="Food &amp; Agriculture">
@@ -202,7 +202,7 @@
 
                         <Slider x:Name="VeteransMan" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="3" Grid.Column="2"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="4" Grid.Column="2"
                                Text="Veterans' Benefits">
@@ -210,7 +210,7 @@
 
                         <Slider x:Name="TransportationMan" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="5" Grid.Column="1"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="6" Grid.Column="1"
                                Text="Transportation">
@@ -222,7 +222,7 @@
 
                         <Slider x:Name="MilitaryDisc" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="8" Grid.Column="1"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="9" Grid.Column="1"
                                Text="Military">
@@ -230,7 +230,7 @@
 
                         <Slider x:Name="EducationDisc" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="8" Grid.Column="2"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="9" Grid.Column="2"
                                Text="Education">
@@ -238,7 +238,7 @@
                       
                        <Slider x:Name="GovernmentDisc" ValueChanged="TotalSpending_ValueChanged"
                                Grid.Row="10" Grid.Column="1"
-                               Minimum="0" Maximum="1500">
+                               Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="11" Grid.Column="1"
                                Text="Government">
@@ -246,7 +246,7 @@
                        
                         <Slider x:Name="HousingDisc" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="10" Grid.Column="2"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="11" Grid.Column="2"
                                Text="Housing &amp; Community">
@@ -254,7 +254,7 @@
 
                         <Slider x:Name="AffairsDisc" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="12" Grid.Column="1"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="13" Grid.Column="1"
                                Text="International Affairs">
@@ -262,7 +262,7 @@
                       
                         <Slider x:Name="EnergyDisc" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="12" Grid.Column="2"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="13" Grid.Column="2"
                                Text="Energy &amp; Environment">
@@ -270,7 +270,7 @@
 
                         <Slider x:Name="ScienceDisc" ValueChanged="TotalSpending_ValueChanged"
                                 Grid.Row="14" Grid.Column="1"
-                                Minimum="0" Maximum="1500">
+                                Minimum="0" Maximum="2000">
                         </Slider>
                         <Label Grid.Row="15" Grid.Column="1"
                                Text="Science">
